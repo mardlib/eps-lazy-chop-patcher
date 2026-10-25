@@ -19,7 +19,7 @@ Start with a freshly recorded mono sample in one layer. Select **COMMAND → WAV
 - Up to 16 chops per pass; the available keyboard range can reduce this limit.
 - Wavesample aliases share the original audio; no separate audio copies are made.
 - Sample start/end and loop boundaries follow each chop.
-- Chopping has been confirmed on real EPS-16 Plus hardware.
+- Chopping has been confirmed on real EPS-16 Plus hardware and also works with the [EPS-16 Plus emulator](https://github.com/mardlib/Ensoniq-EPS-16-Plus).
 - Automatic chop naming is not working reliably. No undo is included.
 - Repeated passes add aliases rather than reusing them and consume wavesample slots.
 
