@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="description" content="Apply Lazy Chop T11 to your own EPS-16 Plus OS 1.30 locally and download a Gotek-ready HFE.">
+<title>EPS Lazy Chop — OS Patcher</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<header><a class="wordmark" href="./">EPS <span>LAB</span></a><span class="badge">EPS-16 PLUS / OS 1.30</span></header>
+<section class="intro"><p class="eyebrow">LAZY CHOP · T11</p><h1>One sample.<br>Up to 16 chops.</h1><p class="lead">Patch your own original OS. Download the finished HFE file and copy it to your Gotek USB drive.</p></section>
+<div class="workspace">
+<section class="patch-card" aria-labelledby="patch-title">
+<div class="section-top"><span class="step">01 — ORIGINAL</span><span class="local">Local in your browser</span></div>
+<h2 id="patch-title">Choose your OS file</h2>
+<p>Unmodified Ensoniq EPS-16 Plus OS 1.30 in <strong>IMG</strong> or <strong>HFE v1</strong>. Your file is never uploaded.</p>
+<label class="file-box" for="original"><span class="file-icon" aria-hidden="true">＋</span><span><strong>Choose original file</strong><small id="filename">IMG · 800 KiB / HFE v1 · DD disk</small></span></label>
+<input id="original" type="file" accept=".img,.hfe" aria-describedby="filename">
+<button id="patch" type="button" disabled>Verify &amp; apply patch <span aria-hidden="true">↗</span></button>
+<p id="status" class="status" role="status" aria-live="polite">Choose your original OS file to begin.</p>
+<section id="result" class="result" hidden aria-labelledby="result-title"><span class="step">02 — DOWNLOAD</span><h2 id="result-title">Your HFE is ready.</h2><a id="download" class="download">Download HFE ↓</a><p>Copy the file to your Gotek USB drive, select it on the Gotek, and restart your EPS. Your original file is preserved.</p><details><summary>HFE file SHA-256</summary><code id="checksum"></code></details></section>
+</section>
+<aside class="notes" aria-label="Release status and features">
+<p class="eyebrow">WHAT’S INSIDE</p><h2>Chop on real hardware.</h2><ul class="features"><li>Up to 16 chops per pass</li><li>Aliases share the original audio</li><li>Sample and loop boundaries</li><li>COMMAND → WAVE → LAZY CHOP<br><small>At the end of the menu</small></li></ul>
+<div class="release-note"><strong>Experimental release T11</strong><p>Chopping has been confirmed on a real EPS-16 Plus. Automatic chop naming is not working reliably yet. Undo is not included.</p><p><strong>Disabled by this patch:</strong> COMMAND → SEQ/SONG, COMMAND → TRACK, COPY FLOPPY, COPY SCSI DRIVE and BACKUP/RESTORE.</p></div>
+</aside>
+</div>
+<section class="how"><div><span class="step">03 — PLAY</span><h2>Root key. Markers. YES.</h2></div><p>Start with a freshly recorded mono sample in a single layer. Open Lazy Chop, play the root key, then play more notes to set markers. Press YES to apply the chops, then YES again to exit. Save using the normal SAVE INSTRUMENT command.</p></section>
+<footer><p>Unofficial EPS-16 Plus extension. Not for the original EPS or ASR-10.</p><p>This site contains no Ensoniq OS image. It processes your own local file.</p></footer>
+</main><script type="module" src="app.mjs"></script>
+</body></html>
